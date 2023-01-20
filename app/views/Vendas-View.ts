@@ -11,8 +11,8 @@ export class VendasView extends View<Vendas> {
                 <th>DATA</th>
                 <th>QUANTIDADE</th>
                 <th>VALOR</th>
-                <th>TELEFONE</th>
                 <th>PAGAMENTO</th>
+                <th>TELEFONE</th>
                 </tr>
         </thead>
         <tbody>
@@ -25,8 +25,9 @@ export class VendasView extends View<Vendas> {
             <td>${item.data}</td>
             <td>${item.quantidade}</td>
             <td>${item.valor}</td>
-            <td>${item.telefone}</td>
             <td>${item.pagamento}</td>
+            <td>${item.telefone}</td>
+           
             
            
             </tr>`;
