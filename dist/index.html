@@ -69,7 +69,7 @@
       </div>
       <div class="form-group">
         <label for="valor">Tipo de pagamento</label>
-        <ul>
+        <ul class="pag">
           <li>Dinheiro</li>
           <input
             id="radio-input"
@@ -83,7 +83,8 @@
           />
           <li>Cartão</li>
           <input
-            id="radio-input"
+            onclick="pegaId('radio-')"
+            id="radio-"
             name="pagamento"
             type="radio"
             class="cartao"
@@ -94,7 +95,7 @@
           />
           <li>Pix</li>
           <input
-            id="radio-input"
+            id="input"
             name="pagamento"
             type="radio"
             class="pix"

@@ -21,7 +21,7 @@ export class ControllerCliente {
     this.inputQuantidade = document.querySelector("#quantidade");
     this.inputValor = document.querySelector("#valor");
     this.inputTelefone = document.querySelector("#telefone");
-    this.inputPagamento = document.querySelector("#radio-input");
+    this.inputPagamento = document.querySelector("#input");
 
     this.vendasView.update(this.vendas);
   }
