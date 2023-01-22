@@ -21,7 +21,7 @@ export class ControllerCliente {
     this.inputQuantidade = document.querySelector("#quantidade");
     this.inputValor = document.querySelector("#valor");
     this.inputTelefone = document.querySelector("#telefone");
-    this.inputPagamento = document.querySelector("#input");
+    this.inputPagamento = document.querySelector("#pag");
 
     this.vendasView.update(this.vendas);
   }
@@ -32,7 +32,7 @@ export class ControllerCliente {
     this.vendasView.update(this.vendas);
     this.vendas.lista();
     this.mensagemView.update("venda realizada com sucesso!");
-    //this.limparFormulario();
+    this.limparFormulario();
   }
   criaVenda(): Cliente {
     const expressaoRegular = /-/g;

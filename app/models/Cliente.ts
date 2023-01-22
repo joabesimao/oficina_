@@ -4,7 +4,7 @@ export class Cliente {
     private _data: Date,
     private _quantidade: number,
     private _valor: number,
-    private _pagamento: any,
+    private _pagamento: string,
     private _telefone: number
   ) {}
 
@@ -21,7 +21,7 @@ export class Cliente {
   get valor(): number {
     return this._valor;
   }
-  get pagamento(): any {
+  get pagamento(): string {
     return this._pagamento;
   }
   get telefone(): number {

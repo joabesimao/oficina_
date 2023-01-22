@@ -68,43 +68,13 @@
         />
       </div>
       <div class="form-group">
-        <label for="valor">Tipo de pagamento</label>
-        <ul class="pag">
-          <li>Dinheiro</li>
-          <input
-            id="radio-input"
-            name="pagamento"
-            type="radio"
-            class="dinheiro"
-            min="0.01"
-            step="0.01"
-            value="Dinheiro"
-            required
-          />
-          <li>Cartão</li>
-          <input
-            onclick="pegaId('radio-')"
-            id="radio-"
-            name="pagamento"
-            type="radio"
-            class="cartao"
-            min="0.01"
-            step="0.01"
-            value="cartao"
-            required
-          />
-          <li>Pix</li>
-          <input
-            id="input"
-            name="pagamento"
-            type="radio"
-            class="pix"
-            min="0.01"
-            step="0.01"
-            value="pix"
-            required
-          />
-        </ul>
+        <label>Escolha o Tipo do Pagamento</label>
+
+        <select id="pag">
+          <option value="Dinheiro">À Vista</option>
+          <option value="Cartao">Cartão</option>
+          <option value="pix">Pix</option>
+        </select>
       </div>
 
       <button class="btn btn-primary" type="submit">Incluir</button>

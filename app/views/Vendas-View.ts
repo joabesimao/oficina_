@@ -22,7 +22,7 @@ export class VendasView extends View<Vendas> {
             return `
             <tr>
             <td>${item.nome}</td>
-            <td>${item.data}</td>
+            <td>${new Intl.DateTimeFormat().format(item.data)}</td>
             <td>${item.quantidade}</td>
             <td>${item.valor}</td>
             <td>${item.pagamento}</td>
