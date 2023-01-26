@@ -26,4 +26,23 @@ export class Cliente {
   get telefone(): number {
     return this._telefone;
   }
+
+  public static criaDe(
+    nomeString: string,
+    dataString: string,
+    quantidadeString: string,
+    valorString: string,
+    telefoneString: string,
+    pagamentoString: string
+  ) {
+    const expressaoRegular = /-/g;
+    const nome = nomeString;
+    const date = new Date(dataString.replace(expressaoRegular, " "));
+    const quantidade = parseInt(quantidadeString);
+    const valor = parseFloat(valorString);
+    const telefone = parseInt(telefoneString);
+    const pagamento = pagamentoString;
+
+    return new Cliente(nome, date, quantidade, valor, pagamento, telefone);
+  }
 }

@@ -29,7 +29,14 @@ export class ControllerCliente {
   }
 
   public adiciona(): void {
-    const venda = this.criaVenda();
+    const venda = Cliente.criaDe(
+      this.inputNome.value,
+      this.inputData.value,
+      this.inputQuantidade.value,
+      this.inputValor.value,
+      this.inputTelefone.value,
+      this.inputPagamento.value
+    );
     if (!this.ehDiaUtil(venda.data)) {
       this.mensagemView.update("apenas dias uteis");
       return;
@@ -41,17 +48,7 @@ export class ControllerCliente {
     this.limparFormulario();
     this.atualizaView();
   }
-  private criaVenda(): Cliente {
-    const expressaoRegular = /-/g;
-    const nome = this.inputNome.value;
-    const date = new Date(this.inputData.value.replace(expressaoRegular, " "));
-    const quantidade = parseInt(this.inputQuantidade.value);
-    const valor = parseFloat(this.inputValor.value);
-    const telefone = parseInt(this.inputTelefone.value);
-    const pagamento = this.inputPagamento.value;
 
-    return new Cliente(nome, date, quantidade, valor, pagamento, telefone);
-  }
   private limparFormulario(): void {
     this.inputNome.value = "";
     this.inputData.value = "";
