@@ -11,8 +11,7 @@ export class Cliente {
         return this._nome;
     }
     get data() {
-        const data = new Date(this._data.getTime());
-        return data;
+        return new Date(this._data.getTime());
     }
     get quantidade() {
         return this._quantidade;
@@ -25,8 +24,5 @@ export class Cliente {
     }
     get telefone() {
         return this._telefone;
-    }
-    get valorFinal() {
-        return this.quantidade * this._valor;
     }
 }

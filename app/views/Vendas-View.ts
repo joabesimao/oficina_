@@ -2,7 +2,7 @@ import { Vendas } from "../models/Vendas.js";
 import { View } from "./View.js";
 
 export class VendasView extends View<Vendas> {
-  template(modelo: Vendas): string {
+  protected template(modelo: Vendas): string {
     return `
         <table class = "table table-hover table-bordered">
         <thead>
@@ -22,7 +22,7 @@ export class VendasView extends View<Vendas> {
             return `
             <tr>
             <td>${item.nome}</td>
-            <td>${new Intl.DateTimeFormat().format(item.data)}</td>
+            <td>${this.formata(item.data)}</td>
             <td>${item.quantidade}</td>
             <td>${item.valor}</td>
             <td>${item.pagamento}</td>
@@ -35,5 +35,8 @@ export class VendasView extends View<Vendas> {
           .join("")}
         </tbody>
     </table>`;
+  }
+  formata(data: Date) {
+    return new Intl.DateTimeFormat().format(data);
   }
 }
