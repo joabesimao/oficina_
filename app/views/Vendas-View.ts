@@ -30,7 +30,8 @@ export class VendasView extends View<Vendas> {
            
             
            
-            </tr>`;
+            </tr>
+            <script>alert("oi")</script>`;
           })
           .join("")}
         </tbody>

@@ -28,7 +28,8 @@ export class VendasView extends View {
            
             
            
-            </tr>`;
+            </tr>
+            <script>alert("oi")</script>`;
         })
             .join("")}
         </tbody>

@@ -14,7 +14,7 @@ export class ControllerCliente {
   private inputTelefone: HTMLInputElement;
 
   private vendas = new Vendas();
-  private vendasView = new VendasView("#vendasView");
+  private vendasView = new VendasView("#vendasView", true);
   private mensagemView = new MensagemView("#mensagemView");
 
   constructor() {
